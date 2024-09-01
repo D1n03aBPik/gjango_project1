@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}  {% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+</head>
+<body>
+
+    <aside>
+        <img src="{% static '\main\img\cat4.gif' %}" alt="" width="300">
+        <span class="logo">Meow</span>
+        <h2>Навигация</h2>
+        <ul>
+            <ul>
+                <a href="{% url 'home' %}"><li>Коты</li></a>
+                <a href="{% url 'about' %}"><li>Факты о котах</li></a>
+                <!-- <a href="{% url 'about' %}"><li>О сайте</li></a> -->
+            </ul>
+        </ul>
+        <div class=tg>
+            <img src="static\main\img\iconizer-telegram (1).svg" alt="" width="60px">
+            <a href="https://t.me/DaLegkQ"><li>Telegram</li></a>
+        </div>
+        <div class=github>
+            <img src="static\main\img\icons8-github-48.png" alt="">
+            <a href="https://github.com/D1n03aBPik/website-for-certification.git"><li>GitHub</li></a>
+        </div>
+    </aside>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

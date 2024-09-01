@@ -1,0 +1,25 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}CATS{% endblock %}
+
+{% block content %}
+    <div class="index">
+        <h2>Cats-Cats-Cats-Cats-Cats-Cats-Cats-Cats-Cats-Cats-Cats-Cats-Cats-Cats-Cats-Cats-Cats-Cats-Cats-Cats</h2>
+        <h1>Коты</h1>
+        <div class="cat">
+            {% include 'main/test.html' %}
+        </div>
+        <form action="{{ gifs }}">
+            <button class="btn1 btn-light">GIF</button>
+        </form>
+        <form action="{{ imgs }}">
+            <button class="btn2 btn-light">Picture</button>
+        </form>
+        <!-- <form action="{{ hello }}">
+            <button class="btn2 btn-light">hello</button>
+        </form> -->
+
+
+    </div>
+    
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}FACTS{% endblock %}
+
+{% block content %}
+    <div class="about">
+        <h2>Cats-Cats-Cats-Cats-Cats-Cats-Cats-Cats-Cats-Cats-Cats-Cats-Cats-Cats-Cats-Cats-Cats-Cats-Cats-Cats</h2>
+        <h1>Факты</h1>  
+        <p>о котах</p>
+        {% if data1 %}
+            {% for el in data1 %}
+                <div class="facts">
+                    <h3>{{ el.title }}</h3>
+                    <p>{{ el.description }}</p>
+                    <a href={{ el.url }}>источник</a>
+                </div>
+            {% endfor %}
+        {% else %}
+        <p>Здесь пусто</p>  
+        {% endif %}
+    </div>
+{% endblock %} 
